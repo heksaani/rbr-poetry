@@ -9,8 +9,6 @@ Currently the application is in development phase. And the features to be implem
 2. Implement the functionality to list all the poets.
 3. Implement the functionality to add a new poet.
 4. Implement the functionality to edit and delete a poet.
-
-
 ## Documentation
 
 Using Ruby version 3.1.2 and Rails version 7.0.8
