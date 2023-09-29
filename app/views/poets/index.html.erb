@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Poets</h1>
+
+<p>Number of poets: <%= @poets.count %></p>
+
+<div id="poets">
+  <% @poets.each do |poet| %>
+    <div id="<%= dom_id poet %>">
+      <p>
+        <div><strong>Name:</strong> <%= link_to poet.name, poet_path(poet) %></div>
+        </p>
+          <p>
+          <strong>Year:</strong>
+          <%= poet.year %>
+          </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New poet", new_poet_path %>

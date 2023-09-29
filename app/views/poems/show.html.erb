@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @poem %>
+
+<div>
+  <%= link_to "Edit this poem", edit_poem_path(@poem) %> |
+  <%= link_to "Back to poems", poems_path %>
+
+  <%= button_to "Destroy this poem", @poem, method: :delete %>
+</div>

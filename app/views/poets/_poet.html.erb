@@ -1,0 +1,30 @@
+<div id="<%= dom_id poet %>">
+  <h2>
+    <strong>
+    <%= poet.name %>
+    </strong>
+  </h2>
+  
+  <p>
+  <em>Year of Birth <%= poet.year %> </em>
+  </p>
+  
+  <p>
+    <strong>Number of Poems:</strong>
+    <%= poet.poems.count %>
+
+  <p>
+
+  <p>
+  <% poet.poems.each do |poem| %>
+    <%= link_to poem.name, poem %>
+  <% end %>
+  </p>
+
+  <p>
+    <%= link_to "Poems", poems_path %>
+
+  </p>
+  
+
+</div>

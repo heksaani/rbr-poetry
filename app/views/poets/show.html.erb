@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @poet %>
+
+<div>
+  <%= link_to "Edit this poet", edit_poet_path(@poet) %> |
+  <%= link_to "Back to poets", poets_path %>
+
+  <%= button_to "Destroy this poet", @poet, method: :delete %>
+</div>
