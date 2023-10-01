@@ -1,14 +1,34 @@
 <p style="color: green"><%= notice %></p>
-
+<!-- Page that shows all poesm -->
 <h1>Poems</h1>
 
 <div id="poems">
   <% @poems.each do |poem| %>
-    <%= render poem %>
-    <p>
-      <%= link_to "Show this poem", poem %>
+  <div id="<%= dom_id poem %>"> <!-- This creates a  -->
+    <p> 
+      <strong>Name: </strong>
+      <%= link_to poem.name, poem%>
     </p>
+    <p> 
+      <strong>Style: </strong>
+      <%= poem.style %>
+    </p>
+    <p> 
+      <strong>Poem: </strong>
+      <%= poem.poem %>
+    </p>
+    <p> 
+      <strong>Poet: </strong>
+      <%= link_to poem.poet.name, poet_path(poem.poet) %>
+    </p>
+  </div>
   <% end %>
 </div>
 
 <%= link_to "New poem", new_poem_path %>
+<br>
+<!--Link back to the poets -->
+<%= link_to "Back to Poets", poets_path %>
+
+
+

@@ -6,7 +6,7 @@ class PoemsController < ApplicationController
     @poems = Poem.all
   end
 
-  # GET /poems/1 or /poems/1.json
+  # GET /poems/1 or /poems/1.json when you click on a poem and it takes you to the individual poem page
   def show
   end
 
