@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :poems
-  resources :poets
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "poets#index"
+  resources :poems
+  resources :poets
+
+  # Defining the ratings routes
+  get 'ratings', to: 'ratings#index'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
 end
