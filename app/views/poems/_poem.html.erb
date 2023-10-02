@@ -1,25 +1,24 @@
 <div id="<%= dom_id poem %>">
 <!-- Individual poem page -->
-  <p>
-    <strong>Name:</strong>
-    <%= poem.name %>
-  </p>
+  <p><strong>Name:</strong>
+    <%= poem.name %></p>
 
-  <p>
-    <strong>Style:</strong>
-    <%= poem.style %>
-  </p>
+  <p><strong>Style:</strong>
+    <%= poem.style %></p>
 
-  <p>
-    <strong>Poem:</strong>
-    <%= simple_format(@poem.poem) %>
-  </p>
+  <p><strong>Poem:</strong>
+    <%= simple_format(@poem.poem) %></p>
 
+  <p><strong>Poet:</strong>
+    <%= link_to poem.poet.name, poem.poet %></p>
+  
   <p>
-    <strong>Poet:</strong>
-    <%= link_to poem.poet.name, poem.poet %>
-  </p>
-
+    <% if poem.ratings.empty? %>
+      <strong> No ratings yet </>
+    <% else %>
+    This poem has total <%= poem.ratings.count %> ratings. <br>
+    The average rating is <%= poem.average_rating %>.
+    <% end %>
   <p>
   <%= link_to "Back to Poets", poets_path %>
 
