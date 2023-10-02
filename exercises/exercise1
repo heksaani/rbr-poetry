@@ -1,0 +1,19 @@
+# copy paste of exercise 1 from the course material
+# creating a new poet, two new poems and few ratings for the poems
+
+# creating a new poet
+p = Poet.create name:"Eino Leino", year:1878
+# creating two new poems
+p.poems.create name:"Nocturne", style:"Tradition", poem: "Ruislinnun laulu korvissani\ntähkäpäiden päällä täysikuu\nkesäyön on onni omanani\nkaskisavuun laaksot verhouu\n\nEn ma iloitse, en sure huokaa\nmutta metsän tummuus mulle tuokaa\npuunto pilven, johon päivä hukkuu\nsiinto vaaran tuulisen, mi nukkuu\ntuoksut vanamon ja varjot veen\nniistä sydämeni laulun teen\n\nSulle laulan neiti kesäheinä\nsydämeni suuri hiljaisuus\nuskontoni soipa säveleinä\ntammenlehväseppel vehryt uus\n\nEn ma enää aja virvatulta\nompa kädessäni onnen kultapienentyy mun ympär elon piiri\n
+aika seisoo, nukkuu tuuliviiri\nedessäni hämäräinen tie\ntuntemattomahan tupaan vie
+
+p.poems.create name:"PIHLAJAN ALLA", style:"Traditional", poem:"Miks äkkiä vaikenit, impyein,\nmiks silmäsi kyynelöi?\nMikä pilvi peittävi päivyein,\nmikä onnesi ontoks söi?\nKas, kuinka kukkivi kaunis maa\nja laulavi leivonen\nja kuinka pihlaja tuoksuaa -\nsinä vain olet murheinen!\n\nSa oothan umpussa nuoruuden\nja rintasi raikas on\nja elämä viittovi hymyillen -\nsiis olkosi huoleton!\nJa jospa huolien häivä vois\nsun taivosi synkistää,\nsen paistais lempeni päivä pois\nja taas olis suukkossää."
+
+eka = p.poems.first
+toka = p.poems.last
+
+eka.ratings.create score: 10
+eka.ratings.create score: 20
+toka.ratings.create score: 30
+toka.ratings.create score: 40
+toka.ratings.create score: 50
