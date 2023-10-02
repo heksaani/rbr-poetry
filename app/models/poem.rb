@@ -4,7 +4,7 @@ class Poem < ApplicationRecord
 
     # add method to calculate average rating
     def average_rating
-        ratings.sum(:score) / ratings.count.to_f
+        ratings.average(:score)
     end
 end
 
