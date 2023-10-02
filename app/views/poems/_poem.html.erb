@@ -16,8 +16,7 @@
     <% if poem.ratings.empty? %>
       <strong> No ratings yet </>
     <% else %>
-    This poem has total <%= poem.ratings.count %> ratings. <br>
-    The average rating is <%= poem.average_rating %>
+    Poem has <%= poem.ratings.count%> <%= "rating".pluralize(poem.ratings.count) %>  with an average of <%= poem.average_rating %> 
     <% end %>
   <p>
   <%= link_to "Back to Poets", poets_path %>
