@@ -8,6 +8,7 @@ class RatingsController < ApplicationController
         # passes it as @rating to the new.html.erb template
         # the object is created with new command and it is not saved to the database
         @rating = Rating.new
+        @poems = Poem.all
     end
 
     def create

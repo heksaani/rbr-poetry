@@ -1,6 +1,7 @@
 <h2> Create a new rating </h2>
 <%= form_for @rating do |f| %>
-    poem id: <%= f.number_field :poem_id %>
+    <!-- uset to_s method to show both the name of the poem and the name of the poet --> 
+    <%= f.select :poem_id, options_from_collection_for_select(@poems, :id, :to_s) %>
     score: <%= f.number_field :score %>
     <%= f.submit %>
 <% end %>
