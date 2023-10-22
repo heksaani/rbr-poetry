@@ -14,6 +14,7 @@ class PoemsController < ApplicationController
   def new
     @poem = Poem.new
     @poets = Poet.all
+    @styles = ["Blank Verse", "Free Verse", "Tanka", "Haiku", "Ode", "Limerick", "Narrative", "Sonnet", "Rhymed", "Epic", "Lyric", "Other"]
   end
 
   # GET /poems/1/edit

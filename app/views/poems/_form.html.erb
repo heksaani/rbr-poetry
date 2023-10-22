@@ -18,9 +18,7 @@
 
   <div>
     <%= form.label :style, style: "display: block" %>
-    <%= form.text_field :style %>
-  </div>
-
+    <%= form.select :style, @styles %> 
   <div>
     <%= form.label :poem, style: "display: block" %>
     <%= form.text_area :poem, rows: 20 %>
