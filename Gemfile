@@ -12,6 +12,7 @@ gem "sprockets-rails"
 
 group :development, :test do
   gem "sqlite3"
+  gem 'pry-byebug'  
 end
 
 group :production do
@@ -82,3 +83,4 @@ gem "dockerfile-rails", ">= 1.5", :group => :development
 gem "sentry-ruby", "~> 5.11"
 
 gem "sentry-rails", "~> 5.11"
+
