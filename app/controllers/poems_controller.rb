@@ -13,6 +13,7 @@ class PoemsController < ApplicationController
   # GET /poems/new
   def new
     @poem = Poem.new
+    @poets = Poet.all
   end
 
   # GET /poems/1/edit
@@ -25,7 +26,7 @@ class PoemsController < ApplicationController
 
     respond_to do |format|
       if @poem.save
-        format.html { redirect_to poem_url(@poem), notice: "Poem was successfully created." }
+        format.html { redirect_to poem_url(poems_path), notice: "Poem was successfully created." }
         format.json { render :show, status: :created, location: @poem }
       else
         format.html { render :new, status: :unprocessable_entity }

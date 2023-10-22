@@ -28,8 +28,9 @@
 
   <div>
     <%= form.label :poet_id, style: "display: block" %>
-    <%= form.number_field :poet_id %>
+    <%= form.select :poet_id, options_from_collection_for_select(Poet.all, :id, :name) %>
   </div>
+  <br>
 
   <div>
     <%= form.submit %>
