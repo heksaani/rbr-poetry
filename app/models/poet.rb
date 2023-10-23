@@ -1,5 +1,5 @@
 class Poet < ApplicationRecord
-    has_many :poems
+    has_many :poems, dependent: :destroy
 
     def print_report
         puts name

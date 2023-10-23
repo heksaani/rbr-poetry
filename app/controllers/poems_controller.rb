@@ -19,6 +19,7 @@ class PoemsController < ApplicationController
 
   # GET /poems/1/edit
   def edit
+    @styles = ["Blank Verse", "Free Verse", "Tanka", "Haiku", "Ode", "Limerick", "Narrative", "Sonnet", "Rhymed", "Epic", "Lyric", "Other"]
   end
 
   # POST /poems or /poems.json
@@ -40,7 +41,7 @@ class PoemsController < ApplicationController
   def update
     respond_to do |format|
       if @poem.update(poem_params)
-        format.html { redirect_to poem_url(@poem), notice: "Poem was successfully updated." }
+        format.html { redirect_to poem_path, notice: "Poem was successfully updated." }
         format.json { render :show, status: :ok, location: @poem }
       else
         format.html { render :edit, status: :unprocessable_entity }

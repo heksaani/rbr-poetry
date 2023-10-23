@@ -1,6 +1,6 @@
 class Poem < ApplicationRecord
     belongs_to :poet
-    has_many :ratings
+    has_many :ratings, dependent: :destroy
 
     # add method to calculate average rating
     def average_rating
